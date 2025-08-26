@@ -71,7 +71,7 @@ teuthology_branch: $teuthology_branch
 teuthology_git_url: $teuthology_git_url
 canonical_tags: $canonical_tags
 openstack:
-  clone: git clone http://github.com/ceph/teuthology
+  clone: git clone http://github.com/guomuwen/teuthology
   user-data: teuthology/openstack/openstack-{os_type}-{os_version}-user-data.txt
   ip: $ip
   nameserver: $nameserver

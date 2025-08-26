@@ -115,7 +115,7 @@ def setup_config(config_paths) -> dict:
         assert targets >= roles, \
             '%d targets are needed for all roles but found %d listed.' % (
                 roles, targets)
-
+    
     return config
 
 

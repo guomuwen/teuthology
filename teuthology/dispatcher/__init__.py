@@ -249,7 +249,7 @@ def prep_job(job_config, log_file_path, archive_dir):
     job_config['teuthology_branch'] = teuthology_branch
     teuthology_sha1 = job_config.get('teuthology_sha1')
     if not teuthology_sha1:
-        repo_url = repo_utils.build_git_url('teuthology', 'ceph')
+        repo_url = repo_utils.build_git_url('teuthology', 'guomuwen')
         try:
             teuthology_sha1 = repo_utils.ls_remote(repo_url, teuthology_branch)
         except Exception as exc:
