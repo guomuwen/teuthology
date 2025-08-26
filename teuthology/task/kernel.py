@@ -191,7 +191,7 @@ def need_to_install(ctx, role, version):
                                                                  want=version))
 
     if '.' in str(version):
-        if cur_version == version:
+        if cur_version in version:
             log.debug('utsrelease strings match, do not need to install')
             ret = False
         os_type = teuthology.get_distro(ctx)

@@ -787,7 +787,7 @@ def get_scratch_devices(remote):
 
     # Remove root device (vm guests) from the disk list
     for dev in devs:
-        if 'vda' in dev:
+        if 'vda' in dev or 'vdb' in dev or 'vdc' in dev:
             devs.remove(dev)
             log.warning("Removing root device: %s from device list" % dev)
 

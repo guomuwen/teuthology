@@ -702,15 +702,15 @@ class GitbuilderProject(object):
         if ref:
             warn('ref')
             return dict(ref=ref)
-        elif tag:
-            warn('tag')
-            return dict(tag=tag)
-        elif branch:
-            warn('branch')
-            return dict(branch=branch)
         elif sha1:
             warn('sha1')
             return dict(sha1=sha1)
+        elif branch:
+            warn('branch')
+            return dict(branch=branch)
+        #elif sha1:
+        #    warn('sha1')
+        #    return dict(sha1=sha1)
         else:
             log.warning("defaulting to main branch")
             return dict(branch='main')
@@ -941,6 +941,14 @@ class ShamanProject(GitbuilderProject):
         if distro in ('centos', 'rhel'):
             distro = 'centos'
             version = cls._parse_version(version)
+
+
+
+
+
+
+        if distro == 'debian':
+            version = 'bookworm'
         return "%s/%s" % (distro, version)
 
     def _get_package_sha1(self):

@@ -435,7 +435,7 @@ def fetch_teuthology(branch, commit=None, lock=True):
     :param commit: The sha1 to checkout. Defaults to None, which uses HEAD of the branch.
     :returns:      The destination path
     """
-    url = config.ceph_git_base_url + 'teuthology.git'
+    url = config.ceph_git_guomuwen_url + 'teuthology.git'
     return fetch_repo(url, branch, commit, bootstrap_teuthology, lock)
 
 
